@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>🌐Traveller</title>
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{sayHi}}</h2>
+
+      <p>Total Population: {{totalPopulation}}</p>
+
+      <!-- <button v-on:click="fetchCountries">Don't click</button> -->
+
+      <form v-on:submit.prevent = "searchCountry">
+        <h3>Search a country to destroy</h3>
+
+        <input placeholder="Country Name" type="text" v-model="countryNameToSearch">
+
+        <input type="submit" value="Search Country" >
+
+      </form>
+
+
+      <section>
+        <div >
+
+          <p>{{foundCountry.name}}</p>
+          <img :src="foundCountry.flag" >
+
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
